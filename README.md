@@ -41,7 +41,7 @@ iv. Polyfit Regression Coefficients
 
 ## IV. Detailed Discussion on the Features
 
-i. Fast Fourier Transformation
+### i. Fast Fourier Transformation
 
 Intuition: A fast Fourier transformation is an algorithm that computes the
 discrete Fourier transformation of a signal or sequence. This is often used in
@@ -53,7 +53,7 @@ fftpack from SciPy was used to detect the peaks. In this project the 2 nd, 3rd a
 the DC component of the signal. Moreover, the FFT produces a mirrored plot,
 which essentially captures the crest and troughs of a signal.
 
-ii. CGM Velocity Calculation
+### ii. CGM Velocity Calculation
 
 Intuition: CGM Velocity is the change rate of change of CGM value.
 Intuitively speaking, the glucose level should change when a person has a meal.
@@ -66,7 +66,7 @@ CGM 1 – Maximum value of CGM Velocity, CGM 2 - 2 nd maximum value of
 CGM Velocity, CGM 3 - 3 rd maximum value of CGM Velocity , CGM 4 - 4 th
 maximum value of CGM Velocity
 
-iii. Autocorrelation
+### iii. Autocorrelation
 
 Intuition: The similarity between a time series and a lagged version of the same
 time series is called autocorrelation. We need to specify a parameter called
@@ -80,7 +80,8 @@ time series will match considerably with the lagged time series, thus highlight
 the similarity in trends. Autocorrelation analysis helps to identify trends in a
 given time series.
 
-iv. Polyfit Regression
+### iv. Polyfit Regression
+
 Intuition: Complex non-linear relationships are represented by
 polynomial curves. Using polynomial fit, we can fit out time series data
 and try to represent the CGM values as accurate as possible. Polyfit
