@@ -31,7 +31,8 @@ The introduction of interpolated values might add error to the dataset.
 
 III. Features
 
-This project requires us to extract four different types of features from the time series data provided. The four different types of features extracted are –
+This project requires us to extract four different types of features from the time series data provided. 
+The four different types of features extracted are –
 
 i. Peaks using Fast Fourier Transformation
 ii. CGM Velocity
