@@ -106,12 +106,12 @@ to normalize the data to understand the contribution of each principal
 component towards maximizing the variance.
 
 The features present in the initial feature matrix are –
-'''
+~~~
 ['coeff1', 'coeff2', 'coeff3', 'coeff4', 'coeff5', 'coeff6', 'coeff7',
 'autocorr_lag_2', 'autocorr_lag_3', 'autocorr_lag_4', 'autocorr_lag_5',
 'autocorr_lag_6', 'autocorr_lag_7', 'autocorr_lag_8', 'autocorr_lag_9',
 'Vel_1', 'Vel_2', 'Vel_3', 'Vel_4', 'Peak_2', 'Peak_3', 'Peak_4','Peak_5']
-'''
+~~~
 
 Principal component analysis (PCA) is a technique for reducing the
 dimensionality of such data sets, increasing interpretability but at the
