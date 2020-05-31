@@ -1,6 +1,6 @@
 # Feature-Extraction-from-CGM-Timeseries-Data
 
-##I. Introduction
+## I. Introduction
 
 Continuous Glucose Monitoring (CGM) is a method to track glucose levels in a
 patient round the day. CGM systems take glucose measurements at regular
@@ -13,7 +13,7 @@ We have data for glucose levels for every five minutes for 2.5 hours during lunc
 The data starts 30 minutes before meal intake and continues up to 2 hours after
 meal consumption. There are multiple time series of multiple patients.
 
-##II. Data Pre-processing
+## II. Data Pre-processing
 
 We have used two types of data for this project – CGMSeriesLunchPat* and
 CGMDatenumLunchPat* where the timestamps and the glucose levels are stored
@@ -29,7 +29,7 @@ the missing values were interpolated. But the interpolate function in pandas doe
 work if data at the beginning is missing, such timeseries data was also dropped.
 The introduction of interpolated values might add error to the dataset.
 
-##III. Features
+## III. Features
 
 This project requires us to extract four different types of features from the time series data provided. 
 The four different types of features extracted are –
@@ -39,7 +39,7 @@ ii. CGM Velocity
 iii. Auto Correlation
 iv. Polyfit Regression Coefficients
 
-##IV. Detailed Discussion on the Features
+## IV. Detailed Discussion on the Features
 
 i. Fast Fourier Transformation
 
@@ -91,7 +91,7 @@ polynomial is very important here. Lower order polynomial is relatively
 flat and smooth as compared to higher order polynomials. We have
 selected the degree of the polynomial to be 6.
 
-##V. Principal Component Analysis
+## V. Principal Component Analysis
 
 All the above-mentioned features were calculated for the five patients and
 an initial feature matrix of size ( 199 x 23) was generated. Before applying
@@ -106,10 +106,12 @@ to normalize the data to understand the contribution of each principal
 component towards maximizing the variance.
 
 The features present in the initial feature matrix are –
-'''['coeff1', 'coeff2', 'coeff3', 'coeff4', 'coeff5', 'coeff6', 'coeff7',
+'''
+['coeff1', 'coeff2', 'coeff3', 'coeff4', 'coeff5', 'coeff6', 'coeff7',
 'autocorr_lag_2', 'autocorr_lag_3', 'autocorr_lag_4', 'autocorr_lag_5',
 'autocorr_lag_6', 'autocorr_lag_7', 'autocorr_lag_8', 'autocorr_lag_9',
-'Vel_1', 'Vel_2', 'Vel_3', 'Vel_4', 'Peak_2', 'Peak_3', 'Peak_4','Peak_5']'''
+'Vel_1', 'Vel_2', 'Vel_3', 'Vel_4', 'Peak_2', 'Peak_3', 'Peak_4','Peak_5']
+'''
 
 Principal component analysis (PCA) is a technique for reducing the
 dimensionality of such data sets, increasing interpretability but at the
@@ -119,7 +121,7 @@ uncorrelated variables that successively maximize variance.
 For calculating the Principal Components, the PCA method from sklearn
 was used.
 
-##VI. Results
+## VI. Results
 
 The final 5 features capture about 90 .6% of the original data.
 From the analysis, the features which contribute the most are –
@@ -129,7 +131,7 @@ maximum peak value of FFT and the sixth coefficient of polynomial fit.
 These features have the high variance and hence contribute the most
 towards principal component construction.
 
-##VII. Explanation of the Results
+## VII. Explanation of the Results
 
 i. Autocorrelation values when lag=
 
